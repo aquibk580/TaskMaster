@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ToastProvider from "@/components/providers/ToastProvider";
+import { ConfettiProvider } from "@/components/providers/ConfettiProvider";
+import Navbar from "@/components/Navbar";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +19,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className="main-gradient">
+          <main>
+            <ConfettiProvider />
+            <ToastProvider />
+            <Navbar />
+            {children}
+          </main>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
