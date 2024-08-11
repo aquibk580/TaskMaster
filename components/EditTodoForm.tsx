@@ -57,7 +57,7 @@ const EditTodoForm = ({ id, title, description, tag }: EditFormProps) => {
       });
       router.push("/");
       router.refresh();
-      toast.success("Todo Updated");
+      toast.success("Task Updated");
     } catch (error) {
       toast.error("Something Went Wrong");
     }

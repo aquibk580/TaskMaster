@@ -52,7 +52,7 @@ const TodoForm = () => {
       });
       router.push("/");
       router.refresh();
-      toast.success("Todo Added");
+      toast.success("Task Added");
       confetti.onOpen();
     } catch (error) {
       toast.error("Something Went Wrong");
