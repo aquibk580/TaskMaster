@@ -1,6 +1,11 @@
 import TodoForm from "@/components/TodoForm";
 import { Card, CardContent } from "@/components/ui/card";
+import { Metadata } from "next";
 
+
+export const metadata:Metadata = {
+  title: "TaskMaaster - Add Task"
+}
 
 const AddTodo = () => {
   return (

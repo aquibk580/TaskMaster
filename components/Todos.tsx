@@ -21,7 +21,7 @@ export const TodosPage = async ({ userId }: TodosProps) => {
   return (
     <>
       {Todos.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-4 md:px-0 my-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 md:grid-cols-2 gap-5 px-4 md:px-0 my-16">
           {Todos.map((todo) => (
             <Todo
               key={todo.id}

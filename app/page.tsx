@@ -1,6 +1,12 @@
 import TodoForm from "@/components/TodoForm";
 import { TodosPage } from "@/components/Todos";
 import { auth } from "@clerk/nextjs/server";
+import { Metadata } from "next";
+
+export const metadata:Metadata = {
+  title:"TaskMaster - Home",
+  description:"Taskmasters Tasks",
+}
 
 export default function Home() {
   const { userId } = auth();

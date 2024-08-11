@@ -1,7 +1,12 @@
 import EditTodoForm from "@/components/EditTodoForm";
 import TodoForm from "@/components/TodoForm";
 import { db } from "@/lib/db";
+import { Metadata } from "next";
 import { redirect } from "next/navigation";
+
+export const metadata:Metadata = {
+  title:"TaskMaster - Edit Task"
+}
 
 const Edit = async ({ params }: { params: { id: string } }) => {
   const todo = await db.todo.findUnique({

@@ -43,7 +43,7 @@ export const Todo = ({ id, title, description, tag }: TodoProps) => {
     <Card className="w-full md:w-[400px] shadow-2xl" style={{backgroundImage:`url("/bubblesBg.avif")`, objectFit:"contain"}}>
       <CardHeader className="flex flex-row items-center justify-between">
         <CardTitle className="leading-7 pr-3 text-xl md:text-2xl font-bold">{title}</CardTitle>
-        <div className="flex flex-row gap-2 items-center">
+        <div className="flex flex-row gap-x-2 items-center space-y-0 gap-y-0 mt-0">
           <Button
             variant="black"
             onClick={() => onEdit(id)}
