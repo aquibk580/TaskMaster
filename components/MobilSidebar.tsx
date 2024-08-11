@@ -1,4 +1,4 @@
-import { Menu } from "lucide-react";
+import { HomeIcon, Menu, PlusCircle } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useRouter } from "next/navigation";
 
@@ -16,13 +16,15 @@ export const MobileSidebar = ({}: MobileSidebarProps) => {
           <SheetTrigger>
             <button
               onClick={() => router.push("/")}
-              className="w-full py-4 border-b border-t border-white hover:bg-white hover:text-black transition"
+              className="flex flex-row items-center justify-center w-full py-4 border-b border-t pr-6 border-white hover:bg-white hover:text-black transition"
             >
+              <HomeIcon size={30} className="pr-2"/> 
               Home
             </button>
           </SheetTrigger>
           <SheetTrigger>
-            <button onClick={() => router.push("/addtodo")} className="w-full py-4 border-b border-white hover:bg-white hover:text-black transition">
+            <button onClick={() => router.push("/addtodo")} className="flex flex-row items-center justify-center w-full py-4 border-b border-white hover:bg-white hover:text-black transition">
+            <PlusCircle size={30} className="pr-2"/> 
               Add Task
             </button>
           </SheetTrigger>

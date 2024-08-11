@@ -34,7 +34,7 @@ export const TodosPage = async ({ userId }: TodosProps) => {
         </div>
       ) : (
         <div className="flex flex-col items-center space-y-4 mt-16">
-          <h1 className="text-2xl md:text-4xl text-black font-bold">
+          <h1 className="text-2xl  md:text-4xl text-white font-bold">
             No Tasks yet
           </h1>
           <Link href="/addtodo">
